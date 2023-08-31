@@ -1,0 +1,42 @@
+[
+  {
+    "_id": 0,
+    "name": "Bruno Lima",
+    "birthdate": "25/12/1997",
+    "email": "brunolima@gmail.com",
+    "cellphone": 11960676869,
+    "phone": 11960708090
+  },
+  {
+    "_id": 1,
+    "name": "Lucas Lima",
+    "birthdate": "12/01/1997",
+    "email": "lucaslima@gmail.com",
+    "cellphone": 11960676869,
+    "phone": 11960708090
+  },
+  {
+    "_id": 2,
+    "name": "Julia Lima",
+    "birthdate": "14/10/1997",
+    "email": "julialima@gmail.com",
+    "cellphone": 11960676869,
+    "phone": 11960708090
+  },
+  {
+    "_id": 3,
+    "name": "Lucas Lima",
+    "birthdate": "12/01/1997",
+    "email": "lucaslima@gmail.com",
+    "cellphone": 11960676869,
+    "phone": 11960708090
+  },
+  {
+    "_id": 4,
+    "name": "Julia Lima",
+    "birthdate": "14/10/1997",
+    "email": "julialima@gmail.com",
+    "cellphone": 11960676869,
+    "phone": 11960708090
+  }
+]

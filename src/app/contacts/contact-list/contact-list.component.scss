@@ -1,0 +1,18 @@
+.mdc-data-table {
+  &__header-cell {
+    background-color: #2196f3 !important;
+    color: white;
+  }
+  &__header-cell,
+  &__cell {
+    text-align: center;
+  }
+}
+.mat-mdc-header-row {
+  height: 40px!important;
+}
+.actions {
+  height: 40px!important;
+  display: flex;
+  justify-content: center;
+}

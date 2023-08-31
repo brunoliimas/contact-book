@@ -1,1 +1,67 @@
-<p>contact-form works!</p>
+<div class="container py-16">
+  <form [formGroup]="form">
+    <div class="w-full flex flex-col md:flex-row md:gap-16">
+
+      <div class="w-full flex flex-col">
+        <label for="name" class="text-alpha-blue font-semibold">Nome Completo</label>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Ex.: Letícia Pacheco dos Santos" formControlName="name" required />
+        </mat-form-field>
+      </div>
+
+      <div class="w-full flex flex-col">
+        <label for="birthdate" class="text-alpha-blue font-semibold">Data de nascimento</label>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Data de Nascimento" formControlName="birthdate" />
+          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="w-full flex flex-col md:flex-row md:gap-16">
+
+      <div class="w-full flex flex-col">
+        <label for="email" class="text-alpha-blue font-semibold">E-mail</label>
+        <mat-form-field>
+          <input type="email" matInput placeholder="Ex.: leticia@gmail.com" formControlName="email" required />
+        </mat-form-field>
+      </div>
+
+      <div class="w-full flex flex-col">
+        <label for="profession" class="text-alpha-blue font-semibold">Profissão</label>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Ex.: Desenvolvedora Web" formControlName="profession" required />
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="w-full flex flex-col md:flex-row md:gap-16">
+
+      <div class="w-full flex flex-col">
+        <label for="phone" class="text-alpha-blue font-semibold">Telefone para contato</label>
+        <mat-form-field>
+          <input type="number" matInput placeholder="Ex.: (11) 4033-2019" formControlName="phone" mask="(00) 0000-0000" />
+        </mat-form-field>
+      </div>
+
+      <div class="w-full flex flex-col">
+        <label for="cellphone" class="text-alpha-blue font-semibold">Celular para contato</label>
+        <mat-form-field>
+          <input type="number" matInput placeholder="Ex.: (11) 98493-2039" formControlName="cellphone" mask="(00) 00000-0000"/>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 mb-10 md:mb6">
+      <mat-checkbox color="primary" formControlName="whatsapp">Número de celular possui Whatsapp</mat-checkbox>
+      <mat-checkbox color="primary" formControlName="sendEmail">Enviar notificações por E-mail</mat-checkbox>
+      <mat-checkbox color="primary" formControlName="sendSms">Enviar notificações por SMS</mat-checkbox>
+    </div>
+    <div class="col-start-2 flex justify-end">
+      <button mat-flat-button color="primary" (click)="onAdd()">Cadastrar contato</button>
+    </div>
+  </form>
+</div>
