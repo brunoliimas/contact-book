@@ -2,26 +2,27 @@
 
 Este projeto foi gerado com a versão 16.2.0 do Angular CLI.
 
-## Servidor de Desenvolvimento
+Execução do Projeto
+-------------------
 
-Execute `ng serve` para iniciar um servidor de desenvolvimento. Acesse [http://localhost:4200/](http://localhost:4200/) no navegador. A aplicação será recarregada automaticamente se você modificar qualquer um dos arquivos de origem.
+1.  Certifique-se de ter um servidor web (por exemplo, Apache) configurado e PHP instalado no seu ambiente de desenvolvimento.
 
-## Geração de Código
+2.  Coloque os arquivos PHP (list.php, delete.php, save.php, update.php) em um diretório acessível pelo servidor web.
 
-Execute `ng generate component nome-do-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3.  Certifique-se de que o Angular CLI esteja instalado. Se não estiver instalado, você pode instalá-lo globalmente com o seguinte comando:
 
-## Compilação
+    bashCopy code
 
-Execute `ng build` para compilar o projeto. Os artefatos de compilação serão armazenados no diretório `dist/`.
+    `npm install -g @angular/cli`
 
-## Execução de Testes Unitários
+4.  No diretório do seu projeto Angular, execute o servidor de desenvolvimento com o comando:
 
-Execute `ng test` para executar os testes unitários via Karma.
+    Copy code
 
-## Execução de Testes End-to-End
+    `ng serve`
 
-Execute `ng e2e` para executar os testes end-to-end usando uma plataforma de sua escolha. Para usar este comando, você precisa primeiro adicionar um pacote que implementa capacidades de teste end-to-end.
+5.  Acesse a aplicação no navegador navegando para `http://localhost:4200/`.
 
-## Ajuda Adicional
+Agora, a aplicação Angular deve estar funcionando e se conectando ao banco de dados MySQL/MariaDB por meio dos scripts PHP para listar, adicionar, atualizar e excluir contatos.
 
-Para obter mais ajuda sobre o Angular CLI, use `ng help` ou consulte a [Visão Geral do Angular CLI](https://angular.io/cli) e a [Página de Referência de Comandos do Angular CLI](https://angular.io/cli/generate).
+Lembre-se de personalizar os arquivos PHP e ajustar as credenciais do banco de dados conforme necessário para o seu ambiente de desenvolvimento e requisitos específicos.
