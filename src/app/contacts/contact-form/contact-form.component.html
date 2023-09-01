@@ -43,14 +43,14 @@
       <div class="w-full flex flex-col">
         <label for="phone" class="text-alpha-blue font-semibold">Telefone para contato</label>
         <mat-form-field>
-          <input type="number" matInput placeholder="Ex.: (11) 4033-2019" formControlName="phone" mask="(00) 0000-0000" />
+          <input matInput placeholder="Ex.: (11) 4033-2019" formControlName="phone" mask="(00) 0000-0000" />
         </mat-form-field>
       </div>
 
       <div class="w-full flex flex-col">
         <label for="cellphone" class="text-alpha-blue font-semibold">Celular para contato</label>
         <mat-form-field>
-          <input type="number" matInput placeholder="Ex.: (11) 98493-2039" formControlName="cellphone" mask="(00) 00000-0000"/>
+          <input matInput placeholder="Ex.: (11) 98493-2039" formControlName="cellphone" mask="(00) 00000-0000"/>
         </mat-form-field>
       </div>
 
@@ -61,7 +61,7 @@
       <mat-checkbox color="primary" formControlName="sendSms">Enviar notificações por SMS</mat-checkbox>
     </div>
     <div class="col-start-2 flex justify-end">
-      <button mat-flat-button color="primary" (click)="onAdd()">Cadastrar contato</button>
+      <button class="custom-button" mat-flat-button color="primary" (click)="onAdd()">Cadastrar contato</button>
     </div>
   </form>
 </div>

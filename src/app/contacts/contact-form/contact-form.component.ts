@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { ContactService } from './../services/contact.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +10,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private contactService: ContactService
+  ) {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
       birthdate: [null],
@@ -26,6 +29,11 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit(): void {}
   onAdd() {
-    console.log('Adicionar');
+    if (this.form.valid) {
+      const formData = this.form.value; // Obter os valores do formulário
+      this.contactService.save(formData);
+      location.reload();
+      console.log('Enviando dados para o backend:', formData);
+    }
   }
 }
